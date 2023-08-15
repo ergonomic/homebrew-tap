@@ -1,4 +1,6 @@
-class CLI < Formula
+require 'formula'
+
+class ErgoCli < Formula
   desc "Ergonomic.dev `ergo` CLI"
   homepage "https://ergonomic.dev/docs/cli-v0.html"
   version "0.2.0-rc.1"
