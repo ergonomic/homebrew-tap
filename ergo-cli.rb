@@ -3,12 +3,12 @@ require 'formula'
 class ErgoCli < Formula
   desc "Ergonomic.dev `ergo` CLI"
   homepage "https://ergonomic.dev/docs/cli-v0.html"
-  version "0.2.0-rc.2"
+  version "0.2.0-rc.3"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ergonomic/cli/releases/download/v0.2.0-rc.2/ergo"
-      sha256 "1759fe8a8f5579fbf8c68e1f063a1a3a4083b1834984ef00d8d1bd6aa8f9e0ff"
+      url "https://github.com/ergonomic/cli/releases/download/v0.2.0-rc.3/ergo"
+      sha256 "02acd093ead5bc9645c866136d4b1f4a2c9a3f4008d6824bafd5517f363ba686"
     else
       # not supported
     end
