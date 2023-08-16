@@ -3,12 +3,12 @@ require 'formula'
 class ErgoCli < Formula
   desc "Ergonomic.dev `ergo` CLI"
   homepage "https://ergonomic.dev/docs/cli-v0.html"
-  version "0.2.0-rc.1"
+  version "0.2.0-rc.2"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ergonomic/cli/releases/download/v0.2.0-rc.1/ergo-cli"
-      sha256 "dd4e676f103aa8ce161a17f3c466dce3d23379bf31cf39245adab862cf78b35e"
+      url "https://github.com/ergonomic/cli/releases/download/v0.2.0-rc.2/ergo"
+      sha256 "1759fe8a8f5579fbf8c68e1f063a1a3a4083b1834984ef00d8d1bd6aa8f9e0ff"
     else
       # not supported
     end
@@ -16,15 +16,10 @@ class ErgoCli < Formula
     # not supported
   end
 
-  option "with-bosh2", "Rename binary to 'bosh2'. Useful if the old Ruby CLI is needed."
-
   def install
-    # this will be "ergo" in the future, but it only does `envrc` for now.
-    binary_name = "ergo-envrc"
-
     if OS.mac?
       if Hardware::CPU.arm?
-        bin.install "ergo-cli" => binary_name
+        bin.install "ergo"
       else
         # not supported
       end
